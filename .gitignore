@@ -27,8 +27,8 @@
 .pub-cache/
 .pub/
 .flutter-plugins-dependencies
-build/
-
+/build/*
+!build/web
 # Android related
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
@@ -72,3 +72,4 @@ build/
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 /test/
 /ios/
+/build/kotlin/
