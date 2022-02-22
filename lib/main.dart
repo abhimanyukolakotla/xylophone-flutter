@@ -6,6 +6,7 @@ void main() {
 }
 
 class XylophoneApp extends StatelessWidget {
+  final audioPlayer = AudioCache();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,7 +37,7 @@ class XylophoneApp extends StatelessWidget {
               ),
               Expanded(
                 flex: 5,
-                child: Row(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     buildButton(Colors.red, "note1.wav"),
@@ -58,13 +59,13 @@ class XylophoneApp extends StatelessWidget {
 
   Widget buildButton(Color color, String note) {
     return Expanded(
-      child: TextButton(
+      child: ElevatedButton(
         style:
             TextButton.styleFrom(backgroundColor: color, primary: Colors.white),
         onPressed: () {
-          var audioPlayer = AudioCache();
           audioPlayer.play(note);
         },
+        child: null,
       ),
     );
   }
