@@ -7,6 +7,17 @@ void main() {
 
 class XylophoneApp extends StatelessWidget {
   final audioPlayer = AudioCache();
+  XylophoneApp() {
+    audioPlayer.loadAll([
+      "note1.wav",
+      "note2.wav",
+      "note3.wav",
+      "note4.wav",
+      "note5.wav",
+      "note6.wav",
+      "note7.wav"
+    ]);
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
